@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Classes\Vite;
 use Roots\Acorn\Sage\SageServiceProvider;
 
 class ThemeServiceProvider extends SageServiceProvider
@@ -24,5 +25,6 @@ class ThemeServiceProvider extends SageServiceProvider
     public function boot()
     {
         parent::boot();
+        Vite::boot();
     }
 }

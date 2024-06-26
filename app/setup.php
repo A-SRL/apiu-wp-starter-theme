@@ -6,6 +6,7 @@
 
 namespace App;
 
+use App\Classes\Vite;
 use function Roots\bundle;
 
 /**
@@ -14,7 +15,11 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
+
+    wp_enqueue_style('theme-style', get_stylesheet_uri());
+    wp_enqueue_style('main-style', Vite::enqueue('resources/styles/app.css'));
+    wp_enqueue_script('main-script', Vite::enqueue('resources/scripts/app.js'));
+
 }, 100);
 
 /**
@@ -23,7 +28,7 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
+
 }, 100);
 
 /**

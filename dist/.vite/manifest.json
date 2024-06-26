@@ -1,0 +1,13 @@
+{
+  "resources/scripts/app.js": {
+    "file": "l0sNRNKZ.js",
+    "name": "app",
+    "src": "resources/scripts/app.js",
+    "isEntry": true
+  },
+  "resources/styles/app.css": {
+    "file": "fNCE5DMw.css",
+    "src": "resources/styles/app.css",
+    "isEntry": true
+  }
+}
